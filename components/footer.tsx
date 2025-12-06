@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-8 mb-4" />
+            <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-8 mb-4 object-contain" />
             <p className="text-sm text-muted-foreground">Premium merchandise for college students.</p>
           </div>
           <div>

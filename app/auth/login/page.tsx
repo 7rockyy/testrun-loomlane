@@ -106,7 +106,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1 text-center">
           <div className="mx-auto mb-4">
-            <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-16 mx-auto" />
+            <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-16 mx-auto object-contain" />
           </div>
           <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
           <CardDescription>Log in to shop your university merchandise</CardDescription>

@@ -32,7 +32,7 @@ export default async function AboutPage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-[#4A7C59]/5 to-background py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-20 md:h-24 mx-auto mb-4" />
+            <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-20 md:h-24 mx-auto mb-4 object-contain" />
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
               Premium Merchandise for College Students
             </h1>

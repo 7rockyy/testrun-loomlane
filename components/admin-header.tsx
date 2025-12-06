@@ -39,7 +39,7 @@ export function AdminHeader() {
 
         <div className="flex-1">
           <Link href="/admin" className="flex items-center gap-2">
-            <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-8" />
+            <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-8 object-contain" />
             <span className="font-semibold text-sm hidden sm:inline">Admin</span>
           </Link>
         </div>

@@ -78,7 +78,7 @@ export function Header({ user, cartCount = 0 }: HeaderProps) {
             <SheetContent side="left">
               <div className="flex flex-col gap-4 mt-8">
                 <Link href="/">
-                  <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-8 mb-4" />
+                  <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-8 mb-4 object-contain" />
                 </Link>
                 {navLinks.map((link) => (
                   <Link
@@ -94,7 +94,7 @@ export function Header({ user, cartCount = 0 }: HeaderProps) {
           </Sheet>
 
           <Link href="/" className="flex items-center">
-            <img src="/images/screenshot-202025-11-24-20at-206.png" alt="Loomlane" className="h-8" />
+            <img src="/images/loomlane-logo.png" alt="Loomlane" className="h-8 object-contain" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">

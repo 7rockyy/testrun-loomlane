@@ -7,7 +7,7 @@ import { Flame, Sparkles, ShieldCheck, Truck, Star, Shirt } from "lucide-react"
 
 const heroPosters = [
   {
-    title: "IIT Bombay Heritage Hoodie",
+    title: "BITS Hyderabad Heritage Hoodie",
     tag: "Live Drop",
     image:
       "https://images.unsplash.com/photo-1542293787938-4d273c3f3f50?auto=format&fit=crop&w=1200&q=80&q=80",
@@ -95,8 +95,8 @@ export default async function Home() {
                   Campus merch that actually fits your life
                 </h1>
                 <p className="text-lg text-slate-700 max-w-2xl">
-                  Drops co-created with students, built with better fabrics, and shipped fast. From IIT hoodies to Flame
-                  Athletics tees—your campus, your style.
+                  Drops co-created with students, built with better fabrics, and shipped fast. From BITS Hoodies to
+                  campus tees—your campus, your style.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" className="bg-emerald-600 text-white hover:bg-emerald-500">
@@ -127,23 +127,24 @@ export default async function Home() {
                 <div className="absolute -inset-8 bg-emerald-100 blur-3xl" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
                   {heroPosters.map((poster, index) => (
-                    <div
-                      key={poster.title}
-                      className={`rounded-2xl overflow-hidden border border-emerald-100 bg-white shadow-xl transform ${
-                        index % 2 === 0 ? "sm:-translate-y-6" : "sm:translate-y-6"
-                      }`}
-                    >
-                      <div className="aspect-[4/5] relative">
-                        <img src={poster.image} alt={poster.title} className="object-cover w-full h-full" />
-                        <div className="absolute top-3 left-3">
-                          <Badge className="bg-emerald-600 text-white">{poster.tag}</Badge>
+                    <Link key={poster.title} href="/shop">
+                      <div
+                        className={`rounded-2xl overflow-hidden border border-emerald-100 bg-white shadow-xl transform cursor-pointer ${
+                          index % 2 === 0 ? "sm:-translate-y-6" : "sm:translate-y-6"
+                        }`}
+                      >
+                        <div className="aspect-[4/5] relative">
+                          <img src={poster.image} alt={poster.title} className="object-cover w-full h-full" />
+                          <div className="absolute top-3 left-3">
+                            <Badge className="bg-emerald-600 text-white">{poster.tag}</Badge>
+                          </div>
+                        </div>
+                        <div className="p-4 space-y-2">
+                          <p className="text-sm text-emerald-700">{poster.accent}</p>
+                          <h3 className="text-lg font-semibold">{poster.title}</h3>
                         </div>
                       </div>
-                      <div className="p-4 space-y-2">
-                        <p className="text-sm text-emerald-700">{poster.accent}</p>
-                        <h3 className="text-lg font-semibold">{poster.title}</h3>
-                      </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

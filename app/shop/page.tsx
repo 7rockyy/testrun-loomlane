@@ -4,9 +4,17 @@ import { Header } from "@/components/header"
 import { ProductGrid } from "@/components/product-grid"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-export default async function ShopPage() {
+interface ShopPageProps {
+  searchParams?: {
+    drop?: string
+  }
+}
+
+export default async function ShopPage({ searchParams }: ShopPageProps) {
   const user = await getCurrentUser()
-  const products = await getProducts(user?.university_id)
+  const allProducts = await getProducts(user?.university_id)
+  const selectedDropId = searchParams?.drop
+  const products = selectedDropId ? allProducts.filter((p) => p.drop_id === selectedDropId) : allProducts
 
   const categories = [...new Set(products.map((p) => p.category))]
   const productsByCategory = categories.reduce(
