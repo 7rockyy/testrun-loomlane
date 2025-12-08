@@ -30,14 +30,20 @@ export function Header({ user, cartCount = 0 }: HeaderProps) {
   const supabase = createClient()
   const [isMockMode, setIsMockMode] = useState(false)
   const [mockUser, setMockUser] = useState<any>(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const mockSession = getMockSession()
     if (mockSession) {
       setIsMockMode(true)
       setMockUser(mockSession)
     }
   }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   const handleSignOut = async () => {
     if (isMockMode) {
